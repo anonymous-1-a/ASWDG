@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Main mechanic Do a diagnostic check</a>
+    <a>Main mechanic Make a repair plan</a>
+    <and>
+        <loop t="dowhile" c="Is the engine and the report ok?|no">
+            <seq>
+                <a>Main mechanic Repair the engine</a>
+                <a>Main mechanic Create an appropriate report</a>
+            </seq>
+        </loop>
+        <seq>
+            <xor c="Does the car has scratches and dents?|yes|no">
+                <seq>
+                    <and>
+                        <a>Auto-body mechanic Repair the dents</a>
+                        <a>Auto-body mechanic Create a list of the dents</a>
+                    </and>
+                    <a>Auto-body mechanic Paint the car</a>
+                </seq>
+                <a>Auto-body mechanic Paint the car</a>
+            </xor>
+            <a>Auto-body mechanic Polish the car</a>
+            <xor c="Are the tires broken?|yes|no">
+                <seq>
+                    <a>Auto-body mechanic Replace the tires</a>
+                    <a>Auto-body mechanic Write a report about the activities he has done</a>
+                </seq>
+                <a>Auto-body mechanic Write a report about the activities he has done</a>
+            </xor>
+        </seq>
+        <seq>
+            <xor c="Is the leather in the seats worn out?|yes|no">
+                <a>Interior mechanic Fix the seats</a>
+                <a>Do nothing</a>
+            </xor>
+            <xor c="Dashboard broken?|yes|no">
+                <a>Interior mechanic Fix the dashboard</a>
+                <a>Do nothing</a>
+            </xor>
+            <xor c="Panels broken?|yes|no">
+                <a>Interior mechanic Fix the panels</a>
+                <a>Do nothing</a>
+            </xor>
+            <a>Interior mechanic Make a report of the repairs</a>
+        </seq>
+    </and>
+    <a>Main mechanic Collect all the data</a>
+    <a>Main mechanic Do final check</a>
+    <xor c="Does the engine work?|yes|no">
+        <a>Main mechanic Collect Finalize the engine</a>
+        <a>end</a>
+    </xor>
+</seq>

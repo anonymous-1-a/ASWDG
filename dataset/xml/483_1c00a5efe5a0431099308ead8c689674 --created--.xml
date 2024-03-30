@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Clerk Goods to ship</a>
+    <and>
+        <seq>
+            <xor c="Decide if normal post or special shipment?|yes|no">
+                <seq>
+                    <a>Clerk Check if extra insurance is necessary</a>
+                    <or>
+                        <a>Logistics Manager Take out extra insurance</a>
+                        <a>Clerk Fill in a post label</a>
+                    </or>
+                </seq>
+                <seq>
+                    <a>Clerk Request quotes from carriers</a>
+                    <a>Clerk Assigne a carrier and prepare paperwork</a>
+                </seq>
+            </xor>
+        </seq>
+        <a>package goods</a>
+    </and>
+    <a>Warehouse Worker Add paperwork and move package to pick area</a>
+    <a>Warehouse Worker Goods available for pick</a>
+</seq>

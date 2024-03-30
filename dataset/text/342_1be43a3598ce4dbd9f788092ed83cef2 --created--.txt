@@ -1,0 +1,3 @@
+In the restaurant management system, when the owner wants to add a worker, they open the system and enter the worker's email. The system then checks if the user already exists in the Users database. If the user is not found, an error response is generated, and the owner is prompted to enter the worker's email again.
+
+However, if the user is found in the database, the system adds the appropriate role to the existing user in the Users database and sends an email. Finally, the worker is added to the system. At the same time, the registered user receives an email. Additionally, the worker's profile is successfully added to the system, and the process ends.

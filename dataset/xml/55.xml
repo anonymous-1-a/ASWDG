@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>the Expense Report is received</a>
+    <xor c="the employee does not already have one">
+        <a>a new account must be created</a>
+    </xor>
+    <a>The report is then reviewed for automatic approval</a>
+    <xor c="under $200|equal to or over $200|rejection|Otherwise">
+        <a>Amounts under $200 are automatically approved</a>
+        <a>amounts equal to or over $200 require approval of the supervisor</a>
+        <a>the employee must receive a rejection notice by email</a>
+        <a>the reimbursement goes to the employees direct deposit bank account</a>
+    </xor>
+    <xor c="the request is not completed in 7 days|the request is not finished within 30 days">
+        <a>the employee must receive an approval in progress email</a>
+        <seq>
+            <a>the process is stopped</a>
+            <a>the employee receives an email cancellation notice</a>
+            <a>the employee re-submit the expense report</a>
+        </seq>
+    </xor>
+</seq>

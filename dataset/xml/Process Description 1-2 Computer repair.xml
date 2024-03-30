@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>customer bring in defective computer</a>
+    <a>Computer Repair Service (CRS) receive defective computer</a>
+    <a>check detect</a>
+    <a>hands out a repair cost calculation</a>
+    <xor c="acceptable?|no|yes">
+        <a>take computer home unrepaired</a>
+        <seq>
+            <a>repair process continue</a>
+            <loop t="dowhile" c="error is detected?|yes">
+                <seq>
+                    <and>
+                        <a>check and repair the hardware</a>
+                        <a>check and configure the software</a>
+                    </and>
+                    <a>proper system functionality is tested</a>
+                </seq>
+            </loop>
+        </seq>
+    </xor>
+</seq>

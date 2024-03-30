@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>In University of 's-Hertogenbosch Professional staff Check for advanced standing request</a>
+    <xor c="No request attached to enrollment|Request attached to enrollment">
+        <a>Professional staff Advance standing completed</a>
+        <seq>
+            <a>Professional staff Identify correlating unit coordinator </a>
+            <a>Professional staff Send advance standing request document to related coordinator</a>
+            <a>Academic staff Assess student request</a>
+            <xor c="Enough information provided|More information required">
+                <a>Academic staff Determine outcome based upon student information</a>
+                <seq>
+                    <a>Academic staff Ask to Student</a>
+                    <a>Academic staff Response within 10 days</a>
+                    <a>Academic staff Information provided to Student</a>
+                    <xor c="Responded within time period|No response">
+                        <a>Academic staff Determine outcome based upon student information</a>
+                        <seq>
+                            <a>Academic staff Automatically deny advance standing request</a>
+                            <a>Academic staff Advanced standing request denied</a>
+                        </seq>
+                    </xor>
+                </seq>
+            </xor>
+            <a>Academic staff Request Approved</a>
+            <a>Academic staff Update the student progress information system</a>
+            <a>Academic staff Advanced standing request approved</a>
+        </seq>
+    </xor>
+</seq>

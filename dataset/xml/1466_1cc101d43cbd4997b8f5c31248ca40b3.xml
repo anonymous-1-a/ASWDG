@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>BBS loan application finalised</a>
+    <a>BBS review complete submission</a>
+    <a>BBS add advise to customer file</a>
+    <a>Commercial Lender decide about loan application</a>
+    <a>Commercial Lender advise customer about outcome</a>
+    <xor c="Customer approval|Customer rejected|Customer no customer response">
+        <seq>
+            <a>Customer approval letter received</a>
+            <a>Commercial Lender collect documentation fee</a>
+            <a>Commercial Lender prepare legal documentation</a>
+            <a>BBS complete loan application</a>
+            <a>BBS create costumer profile</a>
+            <a>BBS loan offer finalised</a>
+        </seq>
+        <seq>
+            <a>Customer rejection letter received</a>
+            <a>Commercial Lender loan application rejected</a>
+        </seq>
+        <seq>
+            <a>Commercial Lender 1 month after customer information</a>
+            <a>Commercial Lender loan application rejected</a>
+        </seq>
+    </xor>
+</seq>

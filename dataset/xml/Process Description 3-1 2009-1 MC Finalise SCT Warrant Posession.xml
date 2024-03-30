@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Part send a warrant possession request</a>
+    <a>Client Service Back Office receive the request</a>
+    <a>Client Service Back Office retrieve the SCT file</a>
+    <a>Client Service Back Office distribute SCT Warrant Possession</a>
+    <a>Client Service Back Office store SCT physical file</a>
+    <a>Client Service Back Office retrieve SCT file</a>
+    <a>Client Service Back Office attach the new SCT document</a>
+    <a>Client Service Back Office store the expanded SCT physical file</a>
+    <a>some other MC internal staff receive the physical SCT file (out of scope)</a>
+</seq>

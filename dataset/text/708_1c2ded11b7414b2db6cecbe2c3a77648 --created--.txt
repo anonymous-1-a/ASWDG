@@ -1,0 +1,4 @@
+If the freight has left the warehouse, the process will begin. There are two steps performed concurrently:
+- The system will issue a track point notice until all track points have been visited. At the same time, the system will log the track point order entry for each track point.
+- A judgment will be made to determine if the freight has been delivered. If after 24 hours have passed, the system will initiate a shipment status inquiry. Another judgment will then be made to confirm if the freight has been delivered.
+Once the freight has been delivered and the track point order entry has been logged, an acceptance certificate will be created. This signifies that the freight has been accepted at the destination. Finally, the process comes to an end.

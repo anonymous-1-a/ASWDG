@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Hiring need exists</a>
+    <a>Hiring Manager Develop Hiring Proposal</a>
+    <a>Senior Manager Review Hiring Proposal</a>
+    <xor c="Proposal Approved?|No|Yes">
+        <a>No New Hire Allowed</a>
+        <seq>
+            <loop t="dowhile" c="Position Description Approved?|No">
+                <seq>
+                    <a>Hiring Manager Develop Position Description</a>
+                    <a>Senior Manager Review Position Description</a>
+                </seq>
+            </loop>
+            <a>HR Specialist Create Open Position</a>
+        </seq>
+    </xor>
+</seq>

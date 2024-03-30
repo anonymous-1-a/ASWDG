@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>any employee of the organization submits an office supply request</a>
+    <a>The process of an Office Supply Request starts</a>
+    <a>the requirement is registered</a>
+    <a>the request is received by the immediate supervisor of the employee requesting the office supplies</a>
+    <a>The supervisor must approve or ask for a change, or reject the request</a>
+    <xor c="the request is rejected|the request is asked to make a change|the request is approved">
+        <a>the process will end</a>
+        <seq>
+            <a>returned to the petitioner/employee</a>
+            <a>review the comments for the change request</a>
+        </seq>
+        <seq>
+            <a>the request will go to the purchase department</a>
+            <a>in charge of making quotations</a>
+            <a>select a vendor</a>
+            <xor c="the vendor is not valid|the vendor is valid">
+                <a>the purchase department will have to choose a different vendor</a>
+                <a>Do nothing</a>
+            </xor>
+            <a>a vendor is selected and confirmed</a>
+            <a>the system will generate and send a purchase order and wait for the product to be delivered and the invoice received</a>
+        </seq>
+    </xor>
+    <a>the system will send a notification to let the user know what the result was</a>
+    <a>approval, rejection or change required the system will send the user a notification</a>
+</seq>

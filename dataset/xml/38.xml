@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>In the context of a claim handling process, it is sometimes necessary to send a questionnaire to the claimant to gather additional information</a>
+    <xor c="response|no response">
+        <a>The claimant is expected to return the questionnaire within five days</a>
+        <seq>
+            <a>a reminder is sent to the claimant</a>
+            <a>another reminder is sent </a>
+        </seq>
+    </xor>
+    <a>so on until the completed questionnaire is received</a>
+</seq>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>the secretary clarifies who will do the shipping.</a>
+    <xor c="do you have large amounts?|large|small">
+        <seq>
+            <a>special shipping will be necessary.</a>
+            <a>the secretary invites three logistic companies to make offers and she selects one of them.</a>
+        </seq>
+        <a>normal post shipment is used.</a>
+    </xor>
+    <and>
+        <a>a package label is written by the secretary and a parcel insurance taken by the logistics department head if necessary.</a>
+        <a>the goods can be already packaged by the warehousemen.</a>
+    </and>
+    <xor c="is everything ready?|yes|no">
+        <a>the packaged goods are prepared for being picked up by the logistic company.</a>
+        <a>do nothing</a>
+    </xor>
+</seq>

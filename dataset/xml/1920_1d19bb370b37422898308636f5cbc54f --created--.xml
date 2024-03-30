@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>Student Enrol in study</a>
+    <and>
+        <seq>
+            <loop t="dowhile" c="Rejected">
+                <seq>
+                    <a>Student Submit an application for internship</a>
+                    <a>Office for studies Evaluation of application</a>
+                </seq>
+            </loop>
+            <a>Competition of internship</a>
+        </seq>
+        <a>Obtain 120 credits</a>
+        <a>Complete all mandatory curses</a>
+        <loop t="dowhile" c="Can he have chosen topic?|no">
+            <seq>
+                <a>Student Choose advisor and topic of a thesis</a>
+                <a>Student Receive a message</a>
+            </seq>
+        </loop>
+    </and>
+    <and>
+        <loop t="dowhile" c="Fail">
+            <seq>
+                <loop t="dowhile" c="requirements not fulfill">
+                    <seq>
+                        <a>Student Submit an application for state final examination</a>
+                        <a>Office for studies Check fulfilment of requirements</a>
+                    </seq>
+                </loop>
+                <a>Student State final exam</a>
+            </seq>
+        </loop>
+        <loop t="dowhile" c="Not defended">
+            <seq>
+                <loop t="dowhile" c="requirements not fulfill">
+                    <seq>
+                        <a>Student Submit an application for defence of thesis</a>
+                        <a>Office for studies Check fulfilment of requirements</a>
+                    </seq>
+                </loop>
+                <a>Student Completion of thesis</a>
+                <a>Student Defence of thesis</a>
+            </seq>
+        </loop>
+    </and>
+    <a>Graduation ceremony</a>
+</seq>

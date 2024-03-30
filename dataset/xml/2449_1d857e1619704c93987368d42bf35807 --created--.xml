@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>DVMS Plant Order received</a>
+    <a>DVMS Plant Winding</a>
+    <and>
+        <a>DVMS Plant Core making</a>
+        <a>DVMS Plant Assembly</a>
+    </and>
+    <a>DVMS Plant Insulation</a>
+    <a>DVMS Plant Heat treatment</a>
+    <a>DVMS Plant Brazing</a>
+    <a>DVMS Plant Testing</a>
+    <xor c="DVMS Plant yes|DVMS Plant no">
+        <a>DVMS Plant Quality control</a>
+        <a>DVMS Plant Termination</a>
+    </xor>
+    <xor c="DVMS Plant yes|DVMS Plant no">
+        <a>DVMS Plant Packing</a>
+        <a>DVMS Plant Termination</a>
+    </xor>
+    <a>DVMS Plant Dispatched to destination</a>
+</seq>

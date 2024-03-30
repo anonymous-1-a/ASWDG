@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Citigroup Inter-Corporation Business-to-Business (B2B) Network U-Turn Request Workflow is Requestor submit a NE Project Request for B2B U-Turn implementation</a>
+    <a>3rd Party Access Solutions Workgroup (3PASWG) receives product order requests, analyzes requirements</a>
+    <a>3rd Party Access Solutions Workgroup (3PASWG) assigns a network engineer</a>
+    <and>
+        <seq>
+            <a>3rd Party Access Solutions Workgroup (3PASWG) notifies the requestor of B2B U-Turn implementation requirements and the CCR approval process</a>
+            <a>Requestor obtained business justification, a BISO statement of compliance, and a signed B2B U-Turn notification letter</a>
+        </seq>
+        <a>3rd Party Access Solutions Workgroup (3PASWG) creates a high-level B2B U-Turn diagram for providing it to the requestor</a>
+    </and>
+    <a>Requestor submit B2B U-Turn approval requests in CCR</a>
+    <a>3rd Party Access Solutions Workgroup (3PASWG) reviews the request</a>
+    <a>3rd Party Access Solutions Workgroup (3PASWG) refers the request to the ISTG</a>
+    <a>Information Security Technology Group (ISTG) reviews the request</a>
+    <xor c="Information Security Technology Group (ISTG) notify requestor of approval|Information Security Technology Group (ISTG) notify requestor of rejection">
+        <seq>
+            <a>Requestor receives an approval notification and notifies NE</a>
+            <a>3rd Party Access Solutions Workgroup (3PASWG) proceeds with the design and implementation of the B2B U-Turn</a>
+            <a>3rd Party Access Solutions Workgroup (3PASWG) advises the requester to register the U-Turn in the CCR</a>
+            <a>Requestor registers a B2B U-Turn in CCR</a>
+        </seq>
+        <a>process end</a>
+    </xor>
+</seq>

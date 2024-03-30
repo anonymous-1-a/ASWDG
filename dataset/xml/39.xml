@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>Mail from the party is collected on a daily basis by the Mail Processing Unit</a>
+    <a>the Mail Clerk sorts the unopened mail into the various business areas</a>
+    <a>The mail is then distributed</a>
+    <a> the mail is received by the Registry</a>
+    <a> it is opened and sorted into groups for distribution, and thus registered in a manual incoming Mail Register</a>
+    <a>the Assistant Registry Manager within the Registry performs a quality check</a>
+    <xor c=" the mail is not compliant| the mail is  compliant">
+        <a>a list of requisition explaining the reason for rejection is compiled and sent back to the party</a>
+        <seq>
+            <a>the matter details (types of action) are captured and provided to the Cashier, who takes the applicable fees attached to the mail</a>
+            <and>
+                <a>the Assistant Registry Manager puts the receipt and copied documents into an envelope and posts it to the party</a>
+                <a>the Cashier captures the Party Details and prints the Physical Court File</a>
+            </and>
+        </seq>
+    </xor>
+</seq>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>BROKER TEL INVESTOR TO BUY "AAA" STOCK</a>
+    <a>INVESTOR BUY MSG RECEIVED</a>
+    <a>INVESTOR BUY "AAA" STOCK</a>
+    <a>INVESTOR SELL "AAA" STOCK</a>
+</seq>

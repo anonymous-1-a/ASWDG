@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Cocoa Beans received</a>
+    <a>Quality Control Officer (QCO) inspect cocoas beans for defects.</a>
+    <xor c="Are the cocoa beans defected?|Defected, 10%|Not Defected, 90%">
+        <seq>
+            <a>Quality Control Officer (QCO) rejects defective beans and fills in the Cocoa Beans Defect Form manually and passes the form to DP (10%).</a>
+            <a>Dispatch Personnel (DP) brings the Cocoa Bean Defect Form from QCO to LM.</a>
+            <a>Logistics Manager (LM) requests new batch of cocoa beans from supplier via email.</a>
+            <a>Cocoa Beans Requested</a>
+        </seq>
+        <seq>
+            <a>Assembly Line Worker (ALW) ensures that the approved cocoa beans are sorted into batches by the machine (90%).</a>
+            <a>Quality Control Officer (QCO) takes samples (5%) from each cocoa bean’s batch and makes it into chocolate liquor.</a>
+            <a>Quality Control Officer (QCO) conduct extensive sampling for each chocolate batch to test for flavour and aroma.</a>
+            <xor c="Quality approved by QCO?|Approved, 80%|Not Approved, 20%">
+                <seq>
+                    <a>Quality Control Officer (QCO) approves the cocoa beans and removes the unclean substances on the beans (80%).</a>
+                    <a>Machine Operator (MO) roasts the cocoas beans in the roaster machine. </a>
+                    <a>Machine Operator (MO) winnows the shells from the cocoa beans via in the winnowing machine.</a>
+                    <a>Cocoa Crusher (CC) crushes the cocoa nibs properly via the crusting machine.</a>
+                    <xor c="Are the cocoa beans crushed properly?|Not crushed properly, 15%|Crushed properly, 85%">
+                        <a>Cocoa Crusher (CC) performs manual grinding of cocoa nibs (15%).</a>
+                        <a>do nothing</a>
+                    </xor>
+                    <a>Machine Operator (MO) rotates the chocolate liquor via the conch machine (85%).</a>
+                    <a>Machine Operator (MO) tempers and cools the chocolate liquor until its  molded.</a>
+                    <xor c="Are the chocolate to be flavoured?|Flavoured, 40% |Original, 60%">
+                        <a>Machine Operator (MO) adds either Caramel or Peanut butter to the chocolate (40%).</a>
+                        <a>do nothing</a>
+                    </xor>
+                    <a>Dispatch Personnel (DP) delivers the chocolate from MO to the LM at the office (60%).</a>
+                    <a>Logistics Manager (LM) stores the batches of chocolate in the warehouse and manually prepares a chocolate inventory list.</a>
+                    <a>Chief Sales Officer (CSO) obtains the chocolate inventory list from LM</a>
+                    <a>Chief Sales Officer (CSO) updates chocolate inventory list into ERP system.</a>
+                    <a>Chief Sales Officer (CSO) receives PO from the distributor via email and inputs the details into the ERP system.</a>
+                    <a>Chief Sales Officer (CSO) refers to PO and determines the amount of shortage of chocolate that they need to produce.</a>
+                    <a>Chief Sales Officer (CSO) updates shortage amount into ERP system.</a>
+                    <a>Logistics Manager (LM) checks chocolate shortage via ERP and prepare a purchase invoice for cocoa beans and enter this into SCM</a>
+                    <a>Logistics Manager (LM) checks the updated PO via the ERP system and prepares the sales invoice for distributor.</a>
+                    <a>Chocolate Delivered</a>
+                </seq>
+                <seq>
+                    <a>Quality Control Officer (QCO) rejects the substandard batch of cocoa beans and fills in the Cocoa Beans Defect Form manually (20%).</a>
+                    <a>Dispatch Personnel (DP) receives defected cocoa beans and cocoa beans defect form from QCO and disposes the defected beans.</a>
+                    <a>Dispatch Personnel (DP) brings the Cocoa Bean Defect Form from QCO to LM.</a>
+                    <a>Logistics Manager (LM) requests new batch of cocoa beans from supplier via email.</a>
+                    <a>Cocoa Beans Requested</a>
+                </seq>
+            </xor>
+        </seq>
+    </xor>
+</seq>

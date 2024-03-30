@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Disability occurs</a>
+    <a>Customer Submit disability claim</a>
+    <a>JCO Receives disability claim</a>
+    <a>JCO Enter claim details</a>
+    <a>JCO Basic claims check</a>
+    <xor c="Accept?|Rejected|Accepted">
+        <a>JCO Reject claim</a>
+        <seq>
+            <a>SCO In-depth assessment</a>
+            <a>SCO Estimate monthly benefit</a>
+            <xor c="Short or long-term?|Short|Long">
+                <a>SCO Register info</a>
+                <seq>
+                    <a>SCO Request medical report</a>
+                    <a>Medical Provider Receives Medical Report Request</a>
+                    <a>Medical Provider Send medical report</a>
+                    <a>SCO Register info</a>
+                    <xor c="Fraud?|Yes|No">
+                        <a>SCO Reject claim</a>
+                        <seq>
+                            <a>Finance Officer Trigger first entitlement payment</a>
+                            <a>Finance Officer Notify customer payment is pending</a>
+                        </seq>
+                    </xor>
+                </seq>
+            </xor>
+        </seq>
+    </xor>
+</seq>

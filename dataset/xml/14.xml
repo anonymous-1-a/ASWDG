@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>the Mail Centre office ofSSP receives an invoice from the client</a>
+    <a>it categorizes the invoice by staff member</a>
+    <a>the invoice is forwarded to the Administration Department</a>
+    <a>this Department processes the Invoice( a complex process )</a>
+    <a>puts all the invoices into a collection box</a>
+    <a>the Data Entry office takes the invoices and enters all data in the SAP system</a>
+    <a>Every hour the Mail Centre office reviews the system and forwards all new invoices for validation</a>
+    <a>the Validation office executes the big process of validating invoices</a>
+    <a>the Payment office executes the payment of every validate invoice</a>
+    <a>all invoices are archived by the Registry office</a>
+</seq>

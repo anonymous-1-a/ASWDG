@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>In Firm Purchasing agent create request for quotation</a>
+    <a>Purchasing agent price comparison</a>
+    <a>Purchasing agent Create contract</a>
+    <a>Purchasing agent Create purchase requisition and assign requisition to source</a>
+    <a>Purchasing agent Create Purchase order</a>
+    <a>Warehouse clerk Process Inbound delivery</a>
+    <a>Warehouse clerk Post Goods Receipt</a>
+    <a>Account payable clerk Invoice Verification</a>
+    <a>Account payable manager Process Blocked Invoice</a>
+    <a>Account payable clerk Payment to Vendor</a>
+</seq>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>a reimbursement request is received</a>
+    <a>The reimbursement process within the ERICS company is started</a>
+    <a>a reimbursement contact is created</a>
+    <a>a beneficiary is chosen</a>
+    <a>a refund period is contract duration is determined</a>
+    <xor c="Once completed, it is necessary to check to see if the customer is a 'Verband' part or only has normal subsidiary?|yes|no">
+        <a>the customer group association is selected</a>
+        <a>customers are selected manually</a>
+    </xor>
+    <a>a threshold is set</a>
+    <a>the refund period has ended</a>
+    <and>
+        <a>a credit note is printed and sent to the customer</a>
+        <a>a reimbursement is calculated and paid to the customer</a>
+    </and>
+    <a>the process ends</a>
+</seq>

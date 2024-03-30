@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>UniPartners Data required</a>
+    <a>UniPartners Assess project specifications</a>
+    <a>UniPartners Determine collection methods</a>
+    <xor c="UniPartners Questionnaire required|UniPartners Interview required|UniPartners client database required">
+        <seq>
+            <a>UniPartners Develop questionnaire</a>
+            <a>UniPartners Assess questionnaire+</a>
+            <a>UniPartners Determine target group</a>
+            <a>UniPartners Distribute questionnaire </a>
+            <a>UniPartners Obtain questionnaire from respondents</a>
+        </seq>
+        <seq>
+            <loop t="dowhile" c="invite rejected">
+                <seq>
+                    <a>UniPartners Determine interviewees</a>
+                    <a>UniPartners Contact interviewees</a>
+                </seq>
+            </loop>
+            <a>Industry professionals Interviewee agreement received</a>
+            <a>UniPartners Develop interview structure</a>
+            <a>UniPartners Conduct interview</a>
+        </seq>
+        <seq>
+            <a>UniPartners Request access to database</a>
+            <a>Client Database access granted</a>
+            <a>UniPartners Assess client database</a>
+            <a>UniPartners Retrieve relevant data</a>
+        </seq>
+    </xor>
+    <a>UniPartners Compile collected data</a>
+    <a>UniPartners Data collection completed</a>
+</seq>

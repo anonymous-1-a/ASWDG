@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>CVS must check the number of resolution retries conducted</a>
+    <xor c="Is the number of retries greater than the specified number?|yes|no">
+        <a>the bag must be returned to the production area for disassemble</a>
+        <seq>
+            <a>CVS must try to contact the customer by phone and remind to pick up the bag</a>
+            <xor c="Does successfully contact the customer?|yes|no">
+                <xor c="Does the customer withdraw the order?|yes|no">
+                    <a>the bag must be returned to the production area for disassemble</a>
+                    <xor c="Does the customer promises to pick up the bag?|yes|no">
+                        <a>CVS must increase the retry count on the bag label</a>
+                        <a>end</a>
+                    </xor>
+                </xor>
+                <a>this number must be increased</a>
+            </xor>
+        </seq>
+    </xor>
+</seq>

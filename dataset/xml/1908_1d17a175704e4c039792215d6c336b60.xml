@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>Administration Receive client</a>
+    <a>Administration Discuss requirements</a>
+    <loop t="dowhile" c="receive declined offer">
+        <seq>
+            <a>Designer Make design</a>
+            <a>Administration Send design</a>
+        </seq>
+    </loop>
+    <a>Administration receive accepted offer</a>
+    <and>
+        <a>Builder Check dimensions</a>
+        <a>Finance Buy equipment</a>
+    </and>
+    <a>Administration Plan date</a>
+    <and>
+        <a>Builder Remove old kitchen</a>
+        <a>Builder Cut shelves</a>
+    </and>
+    <a>Builder Assemble kitchen</a>
+    <a>Finance Send invoice</a>
+    <loop t="dowhile" c="after one hour 1">
+        <a>Finance Send reminder for invoice</a>
+    </loop>
+    <a>Finance receive payment</a>
+</seq>

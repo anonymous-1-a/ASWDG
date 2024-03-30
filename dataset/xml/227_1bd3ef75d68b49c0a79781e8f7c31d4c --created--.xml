@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Business Lender Receive a loan application</a>
+    <a>SAP System Conduct Credit Check by Approved application document</a>
+    <a>SAP System Create Risk Assessment Profile by Approved application document</a>
+    <a>SAP System Assess Loan Suitability with Commercial Lending Compliance Checklist</a>
+    <xor c="Is it an acceptable financial risk?|yes|no">
+        <seq>
+            <and>
+                <a>Business Lender Sent Arranged Customer Reference Reports to RCS Data Intelligence</a>
+                <a>Business Lender Sent Company and Title searches to RCS Data Intelligence</a>
+            </and>
+            <a>Business Lender Customer Credit Report received from RCS Data Intelligence</a>
+            <and>
+                <a>Risk Assessment center Review report for satisfaction with Customer Credit Report</a>
+                <a>Business Lender Review report for satisfaction with Customer Credit Report</a>
+            </and>
+            <xor c="Does the customer credit reports satisfy SAP System?|yes|no">
+                <seq>
+                    <a>SAP System Final review of customer file</a>
+                    <xor c="Does SAP System agree to the application?|yes|no">
+                        <seq>
+                            <a>SAP System Approved application</a>
+                            <a>SAP System Sent loan offer to customer and wait for customer feedback</a>
+                            <xor c="Does the customer agree to the offer?|yes|no">
+                                <seq>
+                                    <a>SAP System Offer acceptance received</a>
+                                    <a>Risk Assessment center Prepare legal documents</a>
+                                    <a>SAP System Application fee received from customer</a>
+                                    <a>SAP System Compile customer file to Customer information database</a>
+                                    <a>SAP System Deliver documents to Loan Center</a>
+                                    <a>SAP System Documents delivered</a>
+                                </seq>
+                                <seq>
+                                    <a>SAP System Offer rejection received</a>
+                                    <a>SAP System Loan application rejected for customer</a>
+                                </seq>
+                            </xor>
+                        </seq>
+                        <a>SAP System Rejected application for customer</a>
+                    </xor>
+                </seq>
+                <a>SAP System Rejected application for customer</a>
+            </xor>
+        </seq>
+        <a>SAP System Rejected application for customer</a>
+    </xor>
+</seq>

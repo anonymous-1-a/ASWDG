@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>a vacancy is reported to me</a>
+    <a>I create a job description from the information</a>
+    <xor c="still confusion in the message|not confusion">
+        <a>I must ask the Department again</a>
+        <a>Do nothing</a>
+    </xor>
+    <a>submitting the job description for consideration</a>
+    <a>waiting for the approval</a>
+    <xor c="the department reject approval|the department request a correction|the description is approved">
+        <seq>
+            <a>I correct the description</a>
+            <a>submit description again</a>
+        </seq>
+        <seq>
+            <a>I correct the description</a>
+            <a>submit description again</a>
+        </seq>
+        <a>I post the job</a>
+    </xor>
+</seq>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>A PayPal client wants to pay with bank account and has selected this as payment option.</a>
+    <a>the PayPal client needs to enter all relevant bank details, i.e. first name, bank name, account type, BSB and account number, and click "continue".</a>
+    <a>This submits the bank details to the PayPal system.</a>
+    <a>the bank details are submitted to the PayPal system</a>
+    <a>it makes two random deposits in the bank account</a>
+    <a>The PayPal system sends a message with this information to the client bank account.</a>
+    <a>the two deposits to the bank account are made.</a>
+    <a>after 3-5 working days it notifies the PayPal client to check his bank account for received deposits.</a>
+    <a>The client may now log into his PayPal account, enter the amounts from the two deposits and click "verify".</a>
+    <a>The PayPal system then checks its values against the values entered by the client.</a>
+    <xor c="do the values match?|yes|no">
+        <a>the bank account is linked to the clients PayPal account and is considered as confirmed.</a>
+        <seq>
+            <a>the bank account is removed from the PayPal system</a>
+            <a>it could not be confirmed.</a>
+        </seq>
+    </xor>
+</seq>

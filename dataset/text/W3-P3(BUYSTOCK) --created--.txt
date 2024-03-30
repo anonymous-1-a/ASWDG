@@ -1,0 +1,1 @@
+This process of purchasing stocks is greatly condensed. Initially, the broker tells the investor to buy "AAA" stocks, then the investor receives the message and buys the "AAA" stocks. When the broker feels the time is right, he alerts the investor to sell the "AAA" stock. When the investor receives the message, sell the "AAA" stocks.

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>The process starts with the business analyst collecting data and conducting business analysis regarding customer feedback</a>
+    <a>the web designer integrates the design and decides where the customer feedback module should be placed</a>
+    <a>The business analyst waits until the design is complete</a>
+    <a>she checks the design and provides feedback</a>
+    <xor c="design needs adjustment|design is OK">
+        <a>the web designer has to change the design and integrates the design and decides where the customer feedback module should be placed , again</a>
+        <seq>
+            <a>The PHP/HTML/CSS specialist integrates with the overall implementation</a>
+            <a>the tester tests the final website to make sure everything is going well</a>
+            <xor c="test is OK|test is not ok">
+                <a>the process ends</a>
+                <a>the tester provides test results to the PHP/HTML/CSS specialist who adjusts according to the test results , and integrates the overall implementation,again</a>
+            </xor>
+        </seq>
+    </xor>
+</seq>

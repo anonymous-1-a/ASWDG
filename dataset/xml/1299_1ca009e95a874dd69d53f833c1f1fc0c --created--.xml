@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <loop t="dowhile" c="Make Changes?|yes">
+        <seq>
+            <a>Employee Complete the request for travel form in MS Word</a>
+            <a>Employee Upload the form on Approval Management System</a>
+            <a>Supervisor Check  the request for travel form</a>
+            <a>Supervisor Check available funds in nominated account</a>
+            <xor c="Amendment Required?|yes|no">
+                <a>Supervisor Comment Issues on the form</a>
+                <xor c="Request Approved?|yes|no">
+                    <seq>
+                        <a>Supervisor Approve the travel form with digital signatures</a>
+                        <a>Employee Download Approved Request for Travel Form</a>
+                        <a>Employee Request Approved</a>
+                    </seq>
+                    <a>Request Rejected</a>
+                </xor>
+            </xor>
+        </seq>
+    </loop>
+    <a>Employee Request Cancelled</a>
+</seq>

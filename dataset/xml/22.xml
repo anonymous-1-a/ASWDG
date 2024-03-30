@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>the management checks the employee performance.</a>
+    <xor c="employee performance is less than 20%|employee performance is greater than 20% but less than 50%|employee performance exceeds 75%">
+        <seq>
+            <a>the management suggests the employee's dismissal to the human resources department (HR).</a>
+            <a>the HR dismisses the employee.</a>
+        </seq>
+        <a>the management will suggest training, which in turn is provided by HR.</a>
+        <seq>
+            <a>There may be either a financial reward or another benefit.</a>
+            <a>the management chooses an appropriate benefit.</a>
+            <a>The financial reward is calculated and paid by the finance department.</a>
+            <a>the management announces the rewarded employee as employee of the month.</a>
+        </seq>
+    </xor>
+</seq>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>The process starts with a visitor filling out a registration - form</a>
+    <a>The availability of products and the credit rating is checked</a>
+    <xor c="the credit rating is higher than 9000?|Yes|No">
+        <a>the registration is called unsuccessful</a>
+        <seq>
+            <a>the interim customer dataset record is created</a>
+            <a>two sub-processes starts in parallel : Device provision and Register customer account at ISP nodes</a>
+            <a>these sub-processes are finished</a>
+            <a>a welcome package is created and sent to the customer to alert then that the registration process was completed successfully</a>
+        </seq>
+    </xor>
+</seq>

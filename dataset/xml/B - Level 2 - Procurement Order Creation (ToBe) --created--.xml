@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <xor c="Type of order?|Purchase|External treatment">
+        <a>Procurement Department of Renson Retrieve purchase order</a>
+        <a>Procurement Department of Renson Retrieve external treatment order</a>
+    </xor>
+    <xor c="Fixed external contact?|yes|no">
+        <seq>
+            <a>Determine order hierarchy according to quota status</a>
+            <xor c="Negotiated price?|yes|no">
+                <xor c="Automated ordering procedure with supplier?|yes|no">
+                    <a>Create parameter file</a>
+                    <a>Create tender</a>
+                </xor>
+                <seq>
+                    <a>Negotiate price with Supplier</a>
+                    <a>Create tender</a>
+                </seq>
+            </xor>
+        </seq>
+        <seq>
+            <a>Contact appropriate external contact with Supplier</a>
+            <a>Negotiate price</a>
+            <a>Create tender</a>
+        </seq>
+    </xor>
+    <a>Send order to supplier</a>
+    <a>Process order confirmation</a>
+    <a>Check order progress</a>
+    <a>Check delivery</a>
+</seq>

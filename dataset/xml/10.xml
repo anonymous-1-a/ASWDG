@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>management indicates that new clients are needed</a>
+    <a>the marketing team will perform a market analysis and prepare a portfolio presentation</a>
+    <a>they have sent out offers to potential clients</a>
+    <a>the marketing team informs management about the responses</a>
+    <xor c="Does the customer accept the offer?|yes|no">
+        <a>management will prepare a contract that will be signed</a>
+        <a>management analyzes the reason why their offer failed in order to improve in the future</a>
+    </xor>
+</seq>

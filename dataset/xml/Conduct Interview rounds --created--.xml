@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>IN CAPGEMINI TECHNOLOGY SERVICES INDIA LIMITED Technical Team Interview conducted</a>
+    <a>Technical Team Conduct Technical Round</a>
+    <xor c="Pass?|No|Yes">
+        <a>Technical Team Reject not qualified candidates</a>
+        <seq>
+            <a>HR Team Conduct HR Round</a>
+            <xor c="Pass?|No|Yes">
+                <a>HR Team Reject not qualified candidates</a>
+                <seq>
+                    <a>HR Team Create Final Selection List</a>
+                    <a>HR Team Send Offer Letter</a>
+                </seq>
+            </xor>
+        </seq>
+    </xor>
+</seq>

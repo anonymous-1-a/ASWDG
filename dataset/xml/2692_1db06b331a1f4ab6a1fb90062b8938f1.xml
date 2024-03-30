@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Grooming Process Intern Grooming Request Received</a>
+    <loop t="dowhile" c="Clean Enough?|No">
+        <a>Intern Perform Quick Shampoo</a>
+    </loop>
+    <a>Master Groomer Evaluates Dog Condition</a>
+    <xor c="Calm|Agitated">
+        <a>Master Groomer Do nothing</a>
+        <a>Vet Sedate Dog</a>
+    </xor>
+    <a>Master Groomer Cut Hair</a>
+    <and>
+        <a>Intern Trim Dog's Nails</a>
+        <a>Master Groomer Clean Dog's Ears</a>
+    </and>
+    <a>Master Groomer Perform Dental Care</a>
+    <a>Master Groomer Dog Groomed</a>
+</seq>

@@ -1,0 +1,7 @@
+Since you are interested in the revenue, you want to sort the revenue data. 
+Click on the arrows in the Revenue eld. 
+You can also sort the revenue by clicking the alternative mouse button on Revenue and choosing Sort Increasing or Sort Decreasing in the context menu. You see that the greatest revenue is obtained with the distribution channel Internet. 
+To see the differences in the revenue data for the months July, August and September, select rst 08.2007 and then 07.2007 in the dropdown box Calendar Year/Month. You see that the revenue data for the distribution channel Internet increased greatly. The marketing campaign for the Internet shop was apparently successful. 
+To add a comment to the Web application about the successful increase in revenue using the Internet, create an appropriate document. Choose Documents Create New Comment in the context menu. 
+Enter a name and description for the document. 
+Enter a text and choose Save

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <or>
+        <a>Click on the arrows in the Revenue eld</a>
+        <seq>
+            <a>clicking the alternative mouse button on Revenue</a>
+            <a>choosing Sort Increasing or Sort Decreasing</a>
+        </seq>
+    </or>
+    <xor c="To see the differences in the revenue data for the months July, August and September?|yes|no">
+        <seq>
+            <a>select rst 08.2007</a>
+            <a>select rst 07.2007</a>
+        </seq>
+        <a>Do nothing</a>
+    </xor>
+    <xor c="To add a comment to the Web application?|yes|no">
+        <seq>
+            <a>Choose Documents Create New Comment</a>
+            <a>Enter a name and description</a>
+            <a>Enter a text</a>
+            <a>choose Save</a>
+        </seq>
+        <a>Do nothing</a>
+    </xor>
+</seq>

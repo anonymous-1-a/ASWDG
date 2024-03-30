@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>Load the data</a>
+    <a>Loading Master Data</a>
+    <a>Loading Transaction Data</a>
+    <a>Dening Queries</a>
+    <a>Creating Web Applications</a>
+    <a>Analyze the data in the Web application</a>
+    <a>add comments to the data</a>
+    <a>Broadcasting Web Applications by E-Mail</a>
+</seq>

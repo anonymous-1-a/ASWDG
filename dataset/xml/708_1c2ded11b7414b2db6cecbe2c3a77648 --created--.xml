@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Freight left warehouse </a>
+    <and>
+        <seq>
+            <a>Issue track point notice </a>
+            <a>Log track point order entry</a>
+        </seq>
+        <loop t="dowhile" c="Freight delivered?|no">
+            <a>After 24 hours, Initiate shipment status inquiry</a>
+        </loop>
+    </and>
+    <a>Create acceptance certificate </a>
+    <a>Freight accepted at destination </a>
+</seq>

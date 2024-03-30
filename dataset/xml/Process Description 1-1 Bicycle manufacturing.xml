@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>sales department receive order</a>
+    <xor c="Accept order?|no|Yes">
+        <a>do nothing</a>
+        <seq>
+            <a>sales department inform storehouse and engineering department</a>
+            <and>
+                <a>engineering department prepare assembling</a>
+                <seq>
+                    <a>storehouse processes the part list of the order</a>
+                    <a>storehouse check part quantity</a>
+                    <xor c="is the part available in-house?|no|yes">
+                        <a>storehouse it is back-ordered</a>
+                        <a>storehouse it is reserved</a>
+                    </xor>
+                    <loop t="while" c="any part left unchecked?|yes">
+                        <seq>
+                            <a>storehouse select unchecked part</a>
+                            <a>storehouse check part quantity</a>
+                            <xor c="is the part available in-house?|no|yes">
+                                <a>storehouse it is back-ordered</a>
+                                <a>storehouse it is reserved</a>
+                            </xor>
+                        </seq>
+                    </loop>
+                </seq>
+            </and>
+            <a>engineering department assemble bicycle</a>
+            <a>sales department ships the bicycle to the customer</a>
+        </seq>
+    </xor>
+</seq>

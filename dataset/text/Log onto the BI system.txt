@@ -1,0 +1,12 @@
+1.	Log onto the BI system with a user that has sufficient authorizations for executing the scenario. 
+2.	Start the Data Warehousing Workbench in the SAP menu by choosing Modeling Data Warehousing Workbench: Modeling. 
+3.	Under Modeling, choose Info Objects. The Info Object tree is displayed. 
+4.	From the context menu at the root node Info Objects of the Info Object tree, choose Create Info Area. 
+5.	On the next screen, enter a technical name and a description for the Info Area. The Info Area is displayed in the Info Object tree. 
+6.	It is used to group your Info Objects.  
+7.	In the context menu of the Info Area, choose Create Info Object Catalog.
+8.	On the next screen, enter a technical name and description, and select Key Figure as the Info Object Type.
+9.	Choose Create
+10.	Activate the Info Object catalog. 
+11.	The Info Object catalog is displayed in your Info Area. 
+12.	It is used to group your key gures. 

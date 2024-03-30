@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Report Production is Researcher Report production initiated</a>
+    <a>Researcher Create report blueprint</a>
+    <a>Researcher Create work details for data profession employees</a>
+    <and>
+        <seq>
+            <a>For data extractor Researcher Prepare article search string</a>
+            <a>For data extractor Researcher Create data extraction template</a>
+        </seq>
+        <a>For data analyst Researcher Build statistic models</a>
+    </and>
+    <a>Researcher Assign tasks to data profession employees</a>
+    <and>
+        <seq>
+            <a>Data profession's Data extractor Use search string to collect resources</a>
+            <a>Data profession's Data extractor Extract useful data from the resources</a>
+            <a>Data profession's Data extractor Upload extracted results to validating system</a>
+            <a>Data profession's Data extractor System review and approve extraction results</a>
+            <loop t="while" c="Upload succeed?|Fail">
+                <seq>
+                    <a>Data profession's Data extractor Upload extracted results to validating system</a>
+                    <a>Data profession's Data extractor System review and approve extraction results</a>
+                    <a>Data profession's Data extractor Generate error log</a>
+                    <a>Data profession's Data extractor Correct the extraction process based on the feedback from the
+                        system
+                    </a>
+                </seq>
+            </loop>
+            <a>Data profession's Data extractor Generate success message</a>
+        </seq>
+        <seq>
+            <a>Data profession's Data analyst Translate statistic model to executable programs</a>
+            <a>Data profession's Data analyst Wait till extracted data is ready</a>
+        </seq>
+    </and>
+    <a>Data profession's Data analyst Feed raw data into the program</a>
+    <a>Data profession's Data analyst Test model</a>
+    <loop t="while" c="Fail">
+        <seq>
+            <a>Data profession's Data analyst Revise the program</a>
+            <a>Data profession's Data analyst Test model</a>
+        </seq>
+    </loop>
+    <a>Data profession's Data analyst Create model diagnose report</a>
+    <a>Researcher Finalize model</a>
+    <a>Researcher Adjust model</a>
+</seq>

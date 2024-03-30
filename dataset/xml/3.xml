@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>an employee files an expense report</a>
+    <a>the process is started</a>
+    <a>the expense report is received</a>
+    <a>A check is performed to make sure the employee has an account</a>
+    <xor c="If this check does not take place within 28 days|has an account|does not have an account">
+        <a>the process is stopped and the employee is sent a “resubmit” email</a>
+        <seq>
+            <a>report is reviewed</a>
+            <a>A check is performed to see if the amount of the expense exceeds 200</a>
+            <xor c="Does the expense exceed 200?|yes|no">
+                <seq>
+                    <a>a supervisor is asked for approval</a>
+                    <a>Three things can happen after this</a>
+                    <xor c="the supervisor approves within 7 days|the supervisor rejects within 7 days|if it takes the supervisor more than 7 days to respond">
+                        <seq>
+                            <a>the deposit of the reimbursement directly to the employee’s bank account</a>
+                            <a>the process is ended</a>
+                        </seq>
+                        <a>the employee receives a notification through email that the request has been rejected</a>
+                        <a>an email is sent to the employee informing him/her that the approval is in progress and the part of the processes after a supervisor is asked for approval is repeated</a>
+                    </xor>
+                </seq>
+                <a>the employee is reimbursed through a deposit directly to the employee’s bank account and the process is ended</a>
+            </xor>
+        </seq>
+        <seq>
+            <a>an account is created</a>
+            <a>the report is reviewed</a>
+            <a>A check is performed to see if the amount of the expense exceeds 200</a>
+            <xor c="Does the expense exceed 200?|yes|no">
+                <seq>
+                    <a>a supervisor is asked for approval</a>
+                    <a>Three things can happen after this</a>
+                    <xor c="the supervisor approves within 7 days|the supervisor rejects within 7 days|if it takes the supervisor more than 7 days to respond">
+                        <seq>
+                            <a>the deposit of the reimbursement directly to the employee’s bank account</a>
+                            <a>the process is ended</a>
+                        </seq>
+                        <a>the employee receives a notification through email that the request has been rejected</a>
+                        <a>an email is sent to the employee informing him/her that the approval is in progress and the part of the processes after a supervisor is asked for approval is repeated</a>
+                    </xor>
+                </seq>
+                <a>the employee is reimbursed through a deposit directly to the employee’s bank account and the process is ended</a>
+            </xor>
+        </seq>
+    </xor>
+</seq>

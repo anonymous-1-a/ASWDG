@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>Customer come</a>
+    <a>Pharmacist Determine medicine type</a>
+    <xor c="OTC?|yes|no">
+        <a>Do nothing</a>
+        <seq>
+            <a>Pharmacist Check prescription</a>
+            <xor c="Legal?|yes|no">
+                <a>Do nothing</a>
+                <seq>
+                    <a>Pharmacist Contact doctor</a>
+                    <a>Doctor Prove the prescription</a>
+                    <xor c="Proved?|yes|no">
+                        <a>Do nothing</a>
+                        <seq>
+                            <a>Pharmacist Reject the collecting</a>
+                            <a>Customer leave</a>
+                        </seq>
+                    </xor>
+                </seq>
+            </xor>
+            <a>Pharmacist Determine whether medicine is collected for others</a>
+            <xor c="Collect for others?|yes|no">
+                <seq>
+                    <a>Pharmacist Check medicine type</a>
+                    <xor c="S8 medicine?|yes|no">
+                        <seq>
+                            <a>Doctor Verify the patient and people who collect medicine</a>
+                            <xor c="Verified?|yes|no">
+                                <a>Do nothing</a>
+                                <seq>
+                                    <a>Pharmacist Reject the collecting</a>
+                                    <a>Customer leave</a>
+                                </seq>
+                            </xor>
+                        </seq>
+                        <a>Do nothing</a>
+                    </xor>
+                </seq>
+                <a>Do nothing</a>
+            </xor>
+            <a>Pharmacist Ask for medicare information</a>
+            <a>IT system Collect and retrieve information</a>
+            <a>Pharmacist Print instructions and labels</a>
+            <a>Pharmacist Stick labels and re-check</a>
+        </seq>
+    </xor>
+    <a>Pharmacist Give medicine and perform counselling</a>
+    <a>Customer leave</a>
+</seq>

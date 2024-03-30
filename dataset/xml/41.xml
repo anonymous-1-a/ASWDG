@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>The intake workflow starts with a notice by telephone at the secretarial office of the mental health care institute</a>
+    <a>The secretarial worker inquires after the name and residence of the patient</a>
+    <a>On the basis of this information, the doctor is put through to the nursing officer responsible for the part of the region that the patient lives in</a>
+    <a>The nursing officer makes a full inquiry into the mental, health, and social state of the patient in question</a>
+    <a>This information is recorded on a registration form</a>
+    <a>this form is handed in at the secretarial office of the institute</a>
+    <a>the information on the form is stored in the information system and subsequently printed</a>
+    <a>a patient file is created</a>
+    <a>The registration form as well as the print from the information system are stored in the patient file</a>
+    <a>two registration cards are produced for respectively the future first and second intaker of the patient</a>
+    <a>The new patient is added on the list of new notices</a>
+    <a>at Wednesday, a staff meeting of the entire medical team takes place</a>
+    <a>At this meeting, the team-leader assigns all new patients on the list of new notices to members of the team</a>
+    <a>Each patient will be assigned to a social-medical worker, who will act as the first intaker of the patient</a>
+    <a>One of the physicians will act as the second intaker</a>
+    <a>The assignments are recorded on an assignment list which is handed to the secretarial office</a>
+    <a>For each new assignment, it is also determined whether the medical file of the patient is required</a>
+    <a>This information is added to the assignment list</a>
+    <a>The secretarial office stores the assignment of each patient of the assignment list in the information system</a>
+    <a>An intaker keeps this registration with him at times when visiting the patient and in his close proximity when he is at the office</a>
+    <a>For each patient for which the medical file is required, the secretarial office prepares and sends a letter to the family doctor of the patient, requesting for a copy of the medical file</a>
+    <a>this copy is received</a>
+    <a>the secretarial office will inform the second intaker and add the copy to the patient file</a>
+    <a>The first intaker plans a meeting with the patient as soon as this is possible</a>
+    <a>During the first meeting, the patient is examined using a standard checklist which is filled out</a>
+    <a>the first intaker puts a copy of these notes in the file of a patient</a>
+    <a>The standard checklist is also added to the patient file</a>
+    <a>The second intaker plans the first meeting</a>
+    <a>Physicians use dictaphones to record their observations made during meetings with patients</a>
+    <a>The secretarial office types out these tapes</a>
+    <a>the information is added to the patient file</a>
+    <a>the secretarial office puts the patient on the list of patients that reach this status</a>
+    <a>For the staff meeting on Wednesday, they provide the team-leader with a list of these patients</a>
+    <a>For each of these patients, the first and second intaker together with the team-leader and the attending psychiatrist formulate a treatment plan</a>
+    <a>This treatment plan formally ends the intake procedure</a>
+</seq>

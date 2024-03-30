@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>Passenger Arrive at security screening belt</a>
+    <xor c="Passenger Hand luggage present|Passenger Hand luggage not present" >
+        <seq>
+            <a>Put hand luggage in tray</a>
+            <and>
+                <a>Passenger Put tray on belt</a>
+                <seq>
+                    <a>PassengerBelongings ready for screening</a>
+                    <and>
+                       <a>Airport Observe hand luggage X-Ray</a>
+                       <a>Airport Observe detector arch</a>
+                    </and>
+                    <a>Airport Transmit screening data to authorities</a>
+                    <a>Airport Screening completed</a>
+                </seq>
+            </and>
+        </seq>
+        <a>Do nothing</a>
+    </xor>
+    <a>Passenger Go through WTMD</a>
+    <a>Passenger Screening completed</a>
+</seq>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>The process is initiated by a switch-over request</a>
+    <a>the customer transmits his data to the customer service department of the company</a>
+    <a>Customer service is a shared service center between the departments Sales and Distribution</a>
+    <a>The customer data is received by customer service and based on this data a customer data object is entered into the CRM system</a>
+    <a> it should then be compared with the internal customer data base and checked for completeness and plausibility</a>
+    <and>
+        <seq>
+            <a>these should be corrected on the basis of a simple error list</a>
+            <a>a new customer object is being created which will remain the data object of interest during the rest of the process flow</a>
+            <a>This object consists of data elements such as the customers name and address and the assigned power gauge</a>
+        </seq>
+        <a>The comparison of data is done to prevent individual customer data being stored multiple times</a>
+    </and>
+    <a>The generated customer object is then used, in combination with other customer data to prepare the contract documents for the power supplier switch (including data such as bank connection, information on the selected rate, requested date of switch-over)</a>
+    <a>an automated check of the contract documents is carried out within the CIS (customer information system) in order to confirm their successful generation</a>
+    <xor c="negative response|positive response">
+        <seq>
+            <a>the causing issues are being analyzed and resolved</a>
+            <a>the contract documents are generated once again</a>
+        </seq>
+        <a>a confirmation document is sent out to the customer stating that the switch-over to the new supplier can be executed</a>
+    </xor>
+    <a>A request to the grid operator is automatically sent out by the CIS</a>
+    <a>It puts the question whether the customer may be supplied by the selected supplier in the future</a>
+    <a>The switch-over request is checked by the grid operator for supplier concurrence, and the grid operator transmits a response comment</a>
+    <xor c="supplier concurrence| there are not any objections by the grid operator">
+        <seq>
+            <a>the grid operator would inform all involved suppliers and demand the resolution of the conflict</a>
+            <a>The grid operator communicates with the old supplier and carries out the termination of the sales agreement between the customer and the old supplier (i.e. the customer service (of the new supplier) does not have to interact with the old supplier regarding termination)</a>
+        </seq>
+        <seq>
+            <a>customer service creates a CIS contract</a>
+            <a>The customer then has the chance to check the contract details and based on this check may decide to either withdraw from the switch contract or confirm it</a>
+            <xor c="Depending on the customers acceptance|Depending on the customers rejection">
+                <a>the process flow at customer service either ends (in case of withdrawal)</a>
+                <a> continues (in case of a confirmation)</a>
+            </xor>
+            <a>the customer can only withdraw from the offered contract within 7 days after the 7th day the contract will be regarded as accepted and the process continues</a>
+            <and>
+                <a>On the switch-date, but no later than 10 days after power supply has begun, the grid operator transmits the power meter data to the customer service and the old supplier via messages containing a services consumption report</a>
+                <a>the grid operator computes the final billing based on the meter data and sends it to the old supplier</a>
+            </and>
+            <a>the old supplier creates and sends the final billing to the customer</a>
+            <a>For the customer as well as the grid operator the process ends then</a>
+            <a> receiving the meter data </a>
+            <a>customer service imports the meter data to systems that require the information</a>
+            <a>The process of winning a new customer ends here</a>
+        </seq>
+    </xor>
+</seq>

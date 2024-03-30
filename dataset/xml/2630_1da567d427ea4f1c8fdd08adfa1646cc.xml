@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>BPMN execution TDD developer Understand BPMN Model</a>
+    <loop t="dowhile" c="Level satisfies project requirements?|no">
+        <seq>
+            <a>BPMN execution TDD developer Write a failing test</a>
+            <loop t="dowhile" c="Test green?|no">
+                <a>BPMN execution TDD developer Extend BPMN/mocks to make test pass</a>
+            </loop>
+        </seq>
+    </loop>
+</seq>

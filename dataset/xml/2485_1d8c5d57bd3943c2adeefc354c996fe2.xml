@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>MDM-Team Start directly after review</a>
+    <loop t="dowhile" c="Occurring problems">
+        <seq>
+            <loop t="dowhile" c="Bad">
+                <seq>
+                    <a>Subsidiary Do data cleansing and enrichment - check for duplicates and unused data</a>
+                    <a>Subsidiary Handover second extracts (after data cleansing) to MDM</a>
+                    <a>MDM-Team Check second extracts after data cleansing</a>
+                    <a>MDM &amp; Subsidiary Common review on second extracts</a>
+                </seq>
+            </loop>
+            <a>MDM &amp; Subsidiary Common data mapping non SAP to SAP into To-Be template</a>
+        </seq>
+    </loop>
+    <a>MDM-Team Check for duplicates for all plants and subsidiaries</a>
+    <a>MDM-Team Cleaned and enriched data</a>
+</seq>

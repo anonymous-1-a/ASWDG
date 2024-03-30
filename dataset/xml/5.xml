@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>a request for new hardware is received by the IT department</a>
+    <a>The process of buying new hardware is started</a>
+    <a>the IT department to analyse the request and either approve or deny it</a>
+    <xor c="Does the IT department decide whether to approve the request?|yes|no">
+        <seq>
+            <a>it is edited and completed</a>
+            <a>an email is sent to the supplier asking about prices</a>
+            <a>the supplier replies to the email by sending an offer for the requested items</a>
+            <a>a form is filled in and sent to the management</a>
+            <a>The management then analyses the request and decides if it is approved or not</a>
+            <xor c="Does the management department decide whether to approve the request?|yes|no">
+                <seq>
+                    <a>the offer is forwarded to the financial department and back to the IT department</a>
+                    <and>
+                        <a>The financial department finds resources</a>
+                        <a>the IT department prepares an order and sends this to the supplier</a>
+                    </and>
+                    <a>the hardware is received by the IT department</a>
+                    <a>the financial department will take care of the invoice and the processes is ended</a>
+                </seq>
+                <seq>
+                    <a>it can send the request back to the IT department for rework</a>
+                    <xor c="Does the management department require the IT department to rework?|yes|no">
+                        <a>the IT department has to go back to editing and completing a request</a>
+                        <seq>
+                            <a>it can also decide to deny the request</a>
+                            <a>the process is ended</a>
+                        </seq>
+                    </xor>
+                </seq>
+            </xor>
+        </seq>
+        <a>the employee is informed via email about the denial and the process is ended</a>
+    </xor>
+</seq>

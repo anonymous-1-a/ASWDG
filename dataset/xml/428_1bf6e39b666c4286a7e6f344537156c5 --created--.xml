@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<loop t="dowhile" c="Continue to next iteration">
+    <seq>
+        <loop t="dowhile" c="changes approved?|no">
+            <seq>
+                <a>Adoption coordinator &amp; Process analysts Modify process description and models</a>
+                <a>Organisation Management &amp; Sponsor Review changes</a>
+            </seq>
+        </loop>
+        <and>
+            <a>Adoption coordinator &amp; Process analysts Publish modified models to PCE</a>
+            <a>Adoption coordinator &amp; Process analysts Implement updated processes</a>
+        </and>
+        <a>Adoption coordinator &amp; Process analysts Monitor process execution</a>
+        <a>Organisation Management &amp; Sponsor Evaluate monitoring results</a>
+        <a>Organisation Management &amp; Sponsor Request improvements</a>
+    </seq>
+</loop>

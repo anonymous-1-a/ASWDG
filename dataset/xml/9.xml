@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>The process starts with an informational meeting among the web design team</a>
+    <xor c="Is the meeting successful?|yes|no">
+        <seq>
+            <a>the team starts by creating a storyboard</a>
+            <and>
+                <a>part of the team starts working on the design and development of the website</a>
+                <seq>
+                    <a>the team will start to prepare an initial draft of the content</a>
+                    <a>the marketing team will conduct this, before the web design team creates the final version of the content</a>
+                    <a>the website will be built and reviewed</a>
+                    <xor c="Is the website approved?|yes|no">
+                        <a>the process is completed</a>
+                        <a>the team goes back to the building step</a>
+                    </xor>
+                </seq>
+            </and>
+        </seq>
+        <a>the process ends here</a>
+    </xor>
+</seq>

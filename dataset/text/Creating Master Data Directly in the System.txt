@@ -1,0 +1,13 @@
+Load the data.
+Loading Master Data for Characteristic "Product"
+Loading Transaction Data
+Dene a query that is used as the basis for a Web application and allows for an ad-hoc analysis of the data in the Web.
+You create the query in the following step:
+Dening Queries
+Create a Web application with navigation options and functions, such as printing based on the query.
+You create the Web application in the following step:
+Creating Web Applications
+Analyze the data in the Web application, add comments to it, and broadcast it by E-mail to other employees.
+You analyze and broadcast the data in the following steps:
+Analyzing Data in the Web Application
+Broadcasting Web Applications by E-Mail

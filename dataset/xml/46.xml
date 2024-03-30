@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>Every time we get a new order from the sales department</a>
+    <a>one of my masters determines the necessary parts and quantities as well as the delivery date</a>
+    <a>that information is present</a>
+    <a>it has to be entered into our production planning system (PPS)</a>
+    <and>
+        <a>PPS optimizes our production processes and creates possibly uniform work packages</a>
+        <a>PPS creates a list of parts to be procured</a>
+    </and>
+    <a>we need to decide whether any parts are missing and must be procured or if this is not necessary</a>
+    <a>we receive a notice from the system and an employee takes care of the implementation</a>
+    <a>the order will be checked again for its quality</a>
+</seq>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>Owner Want to add worker</a>
+    <a>Open Restaurant Management System</a>
+    <loop t="dowhile" c="User not found">
+        <seq>
+            <a>Owner Enter worker email</a>
+            <a>System Check is user exists</a>
+            <a>System Error response</a>
+        </seq>
+    </loop>
+    <a>System Add role to existed user</a>
+    <a>System Send email</a>
+    <and>
+        <a>Worker added</a>
+        <seq>
+            <a>Registered user Email received</a>
+            <a>Worker profile added</a>
+        </seq>
+    </and>
+</seq>

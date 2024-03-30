@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>Car is unlocked for customer</a>
+    <xor c="Reservation time elapsed|Reservation canceled|Reservation time updated">
+        <seq>
+            <a>Send instructions to return car</a>
+            <a>Car is retrieved</a>
+        </seq>
+        <seq>
+            <a>Send cancelling confirmation</a>
+            <a>Send instructions to return car</a>
+            <a>Car is retrieved</a>
+        </seq>
+        <loop t="while" c="Reservation time updated">
+            <seq>
+                <a>Update end time for car rent</a>
+                <a>Notify customer</a>
+            </seq>
+        </loop>
+    </xor>
+</seq>

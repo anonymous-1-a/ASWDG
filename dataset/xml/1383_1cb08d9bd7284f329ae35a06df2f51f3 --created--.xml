@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>IAAP Create a resolution proposal draft</a>
+    <and>
+        <seq>
+            <a>IAAP Request report to Consultative Board</a>
+            <a>IAAP Receive report from Consultative Board</a>
+        </seq>
+        <seq>
+            <a>IAAP Request report to Legal Department</a>
+            <a>IAAP Receive report from Legal Department</a>
+        </seq>
+    </and>
+    <a>IAAP Analyse reports</a>
+    <xor c="External resolution required of External Committee?|yes|no">
+        <seq>
+            <a>IAAP Request external resolution</a>
+            <a>IAAP Receive external resolution</a>
+        </seq>
+        <a>IAAP Review resolution proposal</a>
+    </xor>
+    <a>IAAP Sign, store and notify resolution</a>
+</seq>

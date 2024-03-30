@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>Meteorologist Report daily weather condition</a>
+    <a>Meteorologist Identify areas of attention</a>
+    <a>Meteorologist Report areas for further analysis</a>
+    <and>
+        <seq>
+            <a>Geologist Analyze geological condition</a>
+            <a>Geologist Identify potential events</a>
+            <a>Geologist Report a potential event</a>
+        </seq>
+        <seq>
+            <a>Hydrologist Analyze hydrological condition</a>
+            <a>Hydrologist Identify potential events</a>
+            <a>Hydrologist Report a potential event</a>
+        </seq>
+        <seq>
+            <a>Disaster Analyst Analyze communities condition</a>
+            <a>Disaster Analyst Identify potential events</a>
+            <a>Disaster Analyst Report a potential event</a>
+        </seq>
+    </and>
+    <a>Team Analyze the potential event</a>
+    <xor c="Need meeting?|yes|no">
+        <a>Team Execute team meeting</a>
+        <a>Do nothing</a>
+    </xor>
+    <a>Team Open warning</a>
+    <a>Team Determine the warning level</a>
+    <a>Team Identify the warning reporting member</a>
+    <xor c="Hydrologist|Geologist">
+        <a>Geologist Describe geological conditions at the area</a>
+        <a>Hydrologist Describe hydrological conditions at the area</a>
+    </xor>
+    <a>Disaster Analyst Revise the warning file</a>
+    <a>Disaster Analyst Register the warning in organizational systems</a>
+    <a>Disaster Analyst Communicate the warning</a>
+</seq>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>The process starts periodically on the first of each month</a>
+    <a>Assembler AG places an order with the supplier in order to request more product parts</a>
+    <a>Assembler AG sends the order to the supplier</a>
+    <a>The supplier processes the order</a>
+    <a>The supplier sends an invoice to Assembler AG</a>
+    <a>Assembler AG receives the invoice</a>
+</seq>

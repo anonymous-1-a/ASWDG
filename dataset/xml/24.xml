@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>In ACME Inc. the process of purchase order-to-delivery is started by the financial department.</a>
+    <a>They check the purchase invoice</a>
+    <a>They sends it to the department.</a>
+    <a>The department checks the invoice for factual correctness and registers this in the SAPERION workflow system.</a>
+    <a> a check is performed to see if the amount purchased is over $500 or under $500.</a>
+    <xor c="is it over $500?|yes|no">
+        <seq>
+            <a>the invoice is sent to the department head</a>
+            <a>who then uses the SAPERION workflow to approve the invoice.</a>
+        </seq>
+        <a>do nothing</a>
+    </xor>
+    <a>the ERP system is triggered for payment and the process ends.</a>
+</seq>

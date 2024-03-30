@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Dinner Party</a>
+    <and>
+        <a>Mom Prepares Salad</a>
+        <seq>
+            <a>Son Decide main course</a>
+            <or>
+                <a>Son have steak</a>
+                <a>Son have pasta</a>
+            </or>
+            <a>Son Buy Ingredients</a>
+        </seq>
+    </and>
+    <a>Dad get the ingredients</a>
+    <a>Dad cook</a>
+    <and>
+        <a>Dad enjoy meal</a>
+        <a>Mom enjoy meal</a>
+        <a>Son enjoy meal</a>
+    </and>
+    <a>Mom clean up the plates and utensils</a>
+    <a>process completed </a>
+</seq>

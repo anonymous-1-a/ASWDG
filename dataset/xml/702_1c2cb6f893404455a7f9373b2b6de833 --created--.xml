@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Photo editor expert Remaining photos examined</a>
+    <and>
+        <a>Photo editor expert Edit photos</a>
+        <a>Video editor expert Create video-stories</a>
+    </and>
+    <a>Photo editor expert Upload photos and video-stories to media gallery</a>
+    <a>Customer representative Notify customer via email</a>
+    <a>Customer representative Wait customer confirm order</a>
+    <xor c="Do customers have any additional requests?|yes|no">
+        <seq>
+            <and>
+                <seq>
+                    <a>Customer Has Photo editing requests</a>
+                    <a>Photo editor expert Perform additional photo editing</a>
+                </seq>
+                <seq>
+                    <a>Customer has Video editing requests</a>
+                    <a>Video editor expert Perform additional video editing</a>
+                </seq>
+            </and>
+            <xor c="Is there any additional fee?|yes|no">
+                <and>
+                    <a>Photo editor expert Update order price in Information System</a>
+                    <a>Video editor expert Update order price in Information System</a>
+                </and>
+                <a>Do nothing</a>
+            </xor>
+        </seq>
+        <a>Do nothing</a>
+    </xor>
+    <a>Customer representative Send invoice</a>
+    <a>Customer representative Collect payment</a>
+    <a>Order fulfilled</a>
+</seq>

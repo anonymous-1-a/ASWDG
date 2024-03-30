@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>a customer order is received</a>
+    <a>An order to cash process starts</a>
+    <a>it is sent to the warehouse</a>
+    <a>The warehouse employees determine the parts required to produce the requested itemns</a>
+    <a>these are ordered</a>
+    <a>production will start</a>
+    <a>quality checks will be performed</a>
+    <a>products will be packaged and labeled</a>
+    <a>retuning to the warehouse</a>
+    <a>sales will be informed about the completed production and the product can be sold to the customer</a>
+</seq>

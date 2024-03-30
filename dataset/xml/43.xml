@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>any employee of the organization submits a vacation request</a>
+    <a>The process of Vacations Request starts</a>
+    <a>the requirement is registered</a>
+    <a>the request is received by the immediate supervisor of the employee requesting the vacation</a>
+    <a>The supervisor must approve or reject the request</a>
+    <xor c="the request is rejected|the request is approved">
+        <a>the application is returned to the applicant/employee</a>
+        <a>a notification is generated to the Human Resources Representative</a>
+    </xor>
+</seq>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>A client who wants to create a PayPal account</a>
+    <a>needs to determine the desired account type</a>
+    <a>He should either select a personal account or a premium account</a>
+    <a>the client should enter ogn details ,such as e-mail address and desired password,personal deals ,such as name and date of brith, as well as his telephone number and address</a>
+    <a>the client needs to declare if he has been affiliated with any politically exposed person</a>
+    <a>the client clicks the create account button</a>
+    <a>the details will be sent to the PayPal system</a>
+    <a>a request is received</a>
+    <a>the system will validate the input fields</a>
+    <xor c="Have any invalid fields?|Yes|No">
+        <a>the client will be notified and needs to correct then</a>
+        <a>a welcome email will be generated and sent to indicate that an account has been created</a>
+    </xor>
+</seq>

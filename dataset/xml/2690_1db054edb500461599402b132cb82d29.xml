@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>In kitchen Nonnina receive order</a>
+    <and>
+        <a>Nephews Cook noodles</a>
+        <seq>
+            <and>
+                <a>Nephews Chop onions</a>
+                <a>Nieces chop ingredients</a>
+            </and>
+            <a>Pasta Risotto Expert Cook pasta sauce</a>
+        </seq>
+        <a>Salad Antipasti Expert make salad</a>
+    </and>
+    <a>Nonnina Complete the meal</a>
+    <a>meal ist ready</a>
+</seq>

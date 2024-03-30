@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>The process starts with the Provision Team receiving a request from a Customer</a>
+    <a>the team has to identify the necessary parts</a>
+    <a>they may ask for more information to the customer</a>
+    <a>the team needs to check if all parts are available</a>
+    <xor c="If all parts are available?|yes|no">
+        <a>they are supplied to the customer</a>
+        <seq>
+            <a>the team must record the petition, make an order to Daisuki, and contact the customer once the team collects all parts</a>
+            <a>the items are recollected by the customer</a>
+            <a>the final payment is received</a>
+        </seq>
+    </xor>
+</seq>

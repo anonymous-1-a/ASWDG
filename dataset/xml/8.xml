@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>The process starts by reviewing the order</a>
+    <a>The staff should check if all the requested items are available</a>
+    <a>the staff has to inform customer about a potential delay and order the missing products</a>
+    <a>the customer should be informed about the no longer available items</a>
+    <a>waiting an average of x days for the delivery</a>
+    <a>the staff should check again if all products are on store</a>
+    <a>the staff recollects all products and prepare a package</a>
+    <a>The courier is then informed about the pre-processed package</a>
+    <a>The courier company informs the client about a potential delay until there are enough human resources to process the delivery</a>
+    <a>the package is picked up by the designed driver</a>
+    <a>A centralized service decides the best route to deliver all driver's packages</a>
+    <a>she should update the system so all stakeholders are notified</a>
+</seq>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>A customer brings in a defective computer and the CRS checks the defect and hands out a repair cost calculation back</a>
+    <xor c="costs are acceptable|cost are not acceptable">
+        <seq>
+            <a>the process continues</a>
+            <a>The ongoing repair consists of two activities, which are executed, in an arbitrary order</a>
+            <a> check and repair the hardware</a>
+            <a> checks and configures the software</a>
+        </seq>
+        <a>takes her computer home unrepaired</a>
+    </xor>
+</seq>

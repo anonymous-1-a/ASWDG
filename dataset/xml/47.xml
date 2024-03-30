@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>determine contact details of potential customers</a>
+    <or>
+        <a>we buy details for cold calls</a>
+        <a>our marketing staff participates in exhibitions</a>
+        <a>you just happen to know somebody, who is interested in the product</a>
+    </or>
+    <a>we start calling the customer</a>
+    <a>the call center staff are determining the contact person and the budget which would be available for the
+        project
+    </a>
+    <a>asking the customer whether he is generally interested is also important</a>
+    <xor c="customer is not interested in|the potential project budget is huge|in other cases">
+        <a>we leave him alone</a>
+        <seq>
+            <a>the head of development personally tries to acquire the customer</a>
+            <xor c="the customer is interested in the end|the customer is not interested in the end">
+                <seq>
+                    <a>a detailed online presentation</a>
+                    <xor c="need more technical presentation|do not need more technical presentation">
+                        <a>sales representative or pre-sales employee give more technical presentation</a>
+                        <a>Do nothing</a>
+                    </xor>
+                </seq>
+                <a>Do nothing</a>
+            </xor>
+            <a>we are waiting for the customer to come back to us</a>
+            <a>a sales representative is calling the customer</a>
+            <a>the creation of a quotation</a>
+        </seq>
+        <a>Do nothing</a>
+    </xor>
+</seq>

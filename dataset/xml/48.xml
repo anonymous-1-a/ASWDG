@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>Manager checks the open leads</a>
+    <a>Manager selects the top five ones</a>
+    <a>Manager tells his Sales Assistant to call the contact person of the leads</a>
+    <a>The Sales Assistant calls each customer</a>
+    <xor c="someone is interested|someone is not interested">
+        <seq>
+            <a>sends a note to the Manager</a>
+            <a>processes the lead</a>
+        </seq>
+        <a>he calls the next customer</a>
+    </xor>
+</seq>

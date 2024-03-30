@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>a claim is received</a>
+    <a>checked whether the claimant is insured by the organization</a>
+    <xor c="the claimant is  not insured by the organization|Otherwise">
+        <a>the claimant is informed that the claim must be rejected</a>
+        <seq>
+            <a>the severity of the claim is evaluated</a>
+            <a>Based on the outcome (simple or complex claims), relevant forms are sent to the claimant</a>
+            <a>the forms are returned</a>
+            <a>they are checked for completeness</a>
+            <xor c="the forms provide all relevant details|Otherwise">
+                <a>the claim is registered in the Claims Management system, which ends the Claims Notification process</a>
+                <seq>
+                    <a>the claimant is informed to update the forms</a>
+                    <a> reception of the updated forms+</a>
+                    <a>they are checked again</a>
+                </seq>
+            </xor>
+        </seq>
+    </xor>
+</seq>

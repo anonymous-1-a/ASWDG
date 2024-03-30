@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Pharmacist Add customer details</a>
+    <a>Pharmacist Ask for patient's medicare card</a>
+    <xor c="Has a medical card?|yes|no">
+        <xor c="Is the medicare card valid?|yes|no">
+            <seq>
+                <a>Pharmacist Add patient's information and medicare card detail</a>
+                <a>Pharmacist Added patient information</a>
+            </seq>
+            <seq>
+                <a>Pharmacist Check system or Call Medicare</a>
+                <a>Pharmacist Added patient information</a>
+            </seq>
+        </xor>
+        <and>
+            <seq>
+                <a>Pharmacist Asking support id and confirm the identity</a>
+                <a>Pharmacist Added patient information</a>
+            </seq>
+            <seq>
+                <a>Pharmacist Add patient's information based on the  information list in the prescription</a>
+                <a>Pharmacist Added patient information</a>
+            </seq>
+        </and>
+    </xor>
+</seq>

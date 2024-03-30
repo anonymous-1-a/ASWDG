@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>The party sends a warrant possession request asking a warrant to be released</a>
+    <a>The Client Service Back Office as part of the Small Claims Registry Operations receives the request and retrieves the SCTT file</a>
+    <a>the SCT Warrant Possession is forwarded to Queensland Police</a>
+    <a>The SCTT physical file is stored by the Back Office awaiting a report to be sent by the Police</a>
+    <a>the respective SCT file is retrieved</a>
+    <a>Back Office attaches the new SCT document, and stores the expanded SCT physical file</a>
+    <a>some other MC internal staff receives the physical SCT file (out of scope)</a>
+</seq>

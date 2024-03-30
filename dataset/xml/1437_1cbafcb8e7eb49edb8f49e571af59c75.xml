@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>need of doctor evaluation</a>
+    <and>
+        <a>Referee of Hospital Interview patients</a>
+        <seq>
+            <a>Managing director of Hospital Ask external expert to review</a>
+            <loop t="while" c="Answer on time?|no">
+                <a>Managing director Ask another expert</a>
+            </loop>
+            <a>Receive expertise</a>
+            <a>Managing director Forward expertise to referee</a>
+        </seq>
+    </and>
+    <and>
+        <a>Referee File the results</a>
+        <a>Managing director File check to pay expert</a>
+    </and>
+</seq>

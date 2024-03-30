@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Level 1 executives Receive request for debit card replacement</a>
+    <a>Level 1 executives Initial identity verification of the caller</a>
+    <a>Level 1 executives Preliminary data collection</a>
+    <and>
+        <seq>
+            <a>Level 1 executives Confirm if delivery has to be made to an alternate address</a>
+            <xor c="Level 1 executives Alternate address required?|yes|no">
+                <a>Level 1 executives Initiate the process for alternate address</a>
+                <a>Level 2 executives Identity verification of caller</a>
+            </xor>
+        </seq>
+        <seq>
+            <a>Level 1 executives Assess if the customer is eligible for fee exemption</a>
+            <xor c="Level 1 executives Eligible for fee exemption?|yes|no">
+                <xor c="Team lead available?|yes|no">
+                    <seq>
+                        <a>Team Lead Review fee exemption</a>
+                        <xor c="Team Lead Fee Exempted?|yes|no">
+                            <a>Level 1 executives Exempt fee, Enter in system</a>
+                            <a>Level 1 executives Enter decision (of not exempting fee) in the system</a>
+                        </xor>
+                    </seq>
+                    <xor c="Supervisor available?|yes|no">
+                        <seq>
+                            <a>Supervisor Review fee exemption</a>
+                            <xor c="Supervisor Fee Exempted?|yes|no">
+                                <xor c="Team Lead Fee Exempted?|yes|no">
+                                    <a>Level 1 executives Exempt fee, Enter in system</a>
+                                    <a>Level 1 executives Enter decision (of not exempting fee) in the system</a>
+                                </xor>
+                                <a>Level 1 executives Enter decision (of not exempting fee) in the system</a>
+                            </xor>
+                        </seq>
+                        <seq>
+                            <a>Manager Review Fee exemption</a>
+                            <xor c="Manager Fee Exempted?|yes|no">
+                                <xor c="Supervisor Fee Exempted?|yes|no">
+                                    <xor c="Team Lead Fee Exempted?|yes|no">
+                                        <a>Level 1 executives Exempt fee, Enter in system</a>
+                                        <a>Level 1 executives Enter decision (of not exempting fee) in the system</a>
+                                    </xor>
+                                    <a>Level 1 executives Enter decision (of not exempting fee) in the system</a>
+                                </xor>
+                                <a>Level 1 executives Enter decision (of not exempting fee) in the system</a>
+                            </xor>
+                        </seq>
+                    </xor>
+                </xor>
+                <a>Level 1 executives Enter decision (of not exempting fee) in the system</a>
+            </xor>
+        </seq>
+    </and>
+    <a>Level 2 executives Identity verification of caller</a>
+    <a>Level 2 executives Verify address and clear account holds</a>
+    <a>Level 2 executives Place order for card replacement</a>
+</seq>

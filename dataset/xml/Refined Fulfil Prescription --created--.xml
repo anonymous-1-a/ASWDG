@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Technician Prescription received</a>
+    <a>Technician Enter prescription details</a>
+    <a>DUR System Perform DUR Check</a>
+    <xor c="DUR alarm raised?|no|yes">
+        <a>do nothing</a>
+        <seq>
+            <a>Pharmacist Perform further DUR review</a>
+            <xor c="Call doctor required?|No|Yes">
+                <a>do nothing</a>
+                <a>Pharmacist Confirm prescription with doctor</a>
+            </xor>
+            <xor c="Confirmed by doctor?|yes|no">
+                <a>do nothing</a>
+                <a>Prescription unfilled</a>
+            </xor>
+        </seq>
+    </xor>
+    <a>DUR System Perform Insurance check</a>
+    <xor c="Full cost covered?|yes|no">
+        <a>do nothing</a>
+        <seq>
+            <a>DUR System Report % of prescription paid</a>
+            <a>Pharmacist Determine patient cost</a>
+            <a>Pharmacist Determine any replacement drug available</a>
+            <a>Pharmacist Evaluate drug replacement</a>
+            <xor c="Doctor review required?|no|yes">
+                <seq>
+                    <a>Technician Offer customer option to replace</a>
+                    <xor c="Accepted replacement?|yes|no">
+                        <seq>
+                            <a>Technician Pick replacement prescription from shelves</a>
+                            <a>Pharmacist Recalculate replacement drug cost</a>
+                        </seq>
+                        <a>Technician Pick original prescription from shelves</a>
+                    </xor>
+                </seq>
+                <seq>
+                   <a>Pharmacist Request doctor approval</a>
+                    <xor c="Drug replacement approved?|yes|no">
+                        <seq>
+                            <a>Technician Offer customer option to replace</a>
+                            <xor c="Accepted replacement?|yes|no">
+                                <seq>
+                                    <a>Technician Pick replacement prescription from shelves</a>
+                                    <a>Pharmacist Recalculate replacement drug cost</a>
+                                </seq>
+                                <a>Technician Pick original prescription from shelves</a>
+                             </xor>
+                        </seq>
+                        <a>Technician Pick original prescription from shelves</a>
+                    </xor>
+                </seq>
+            </xor>
+        </seq>
+    </xor>
+    <a>Pharmacist Perform quality check for correct prescription</a>
+    <xor c="Prescription correction required?|no|yes">
+        <a>do nothing</a>
+        <a>Pharmacist Correct prescription</a>
+    </xor>
+    <a>Pharmacist Seal bag and store prescription in pickup area</a>
+    <a>Prescription filled</a>
+</seq>

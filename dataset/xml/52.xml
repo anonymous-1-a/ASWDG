@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>the database is backed up</a>
+    <a>the database is checked</a>
+    <xor c="no new records are found|new records are found">
+        <seq>
+            <a>check the CRM system</a>
+            <xor c="new returns exist|not exist">
+                <seq>
+                    <a>register all defaulting accounts and customers</a>
+                    <xor c="the defaulting client codes have not been previously advised|have been previously advised">
+                        <seq>
+                            <a>produce another table of defaulting accounts</a>
+                            <a>send to account management</a>
+                        </seq>
+                        <a>Do nothing</a>
+                    </xor>
+                </seq>
+                <a>Do nothing</a>
+            </xor>
+        </seq>
+        <a>Do nothing</a>
+    </xor>
+    <xor c="All of this not be completed by 2:30 pm|completed before 2:30 pm">
+        <a>n alert should be sent to the supervisor</a>
+        <a>Do nothing</a>
+    </xor>
+</seq>

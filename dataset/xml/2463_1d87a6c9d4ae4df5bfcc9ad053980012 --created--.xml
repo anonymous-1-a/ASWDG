@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>Customer walk-in</a>
+    <a>CSO gathers customer requirements &amp; fills rental application form</a>
+    <a>OD Dispatches rental application form from CSO to MO</a>
+    <a>MO checks availability of choice industrial space</a>
+    <a>MO proceeds to Customer Service Counter (CSC) to meet customer</a>
+    <a>MO obtains customer Unique Entity Number (UEN ) and verifies eligibility from government website</a>
+    <xor c="yes 75%|No 25%">
+        <seq>
+            <a>MO markets choice industrial spaces to customer</a>
+            <xor c="Marketing Officer (MO) Accept Choice 90%|Marketing Officer (MO) Reject Choice 10%">
+                <seq>
+                    <a>MO reserves customer selection in IMS and updates rental application form &amp; pass form to
+                        customer
+                    </a>
+                    <a>MO emails Legal Department (LM) for Rental Application approval</a>
+                    <a>CSO collects rental application form and booking fee from customer &amp; informs 2 working day
+                        wait
+                        time
+                    </a>
+                </seq>
+                <a>MO updates rental application form of customer rejection</a>
+            </xor>
+        </seq>
+        <a>MO informs customer of UEN ineligibility and updates status rental application form of rejection</a>
+    </xor>
+</seq>

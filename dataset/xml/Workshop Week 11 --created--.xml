@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>Landing Department Check Financial Coverage</a>
+    <xor c="Have financial problem?|no|yes">
+        <seq>
+            <a>Landing Department Check Property</a>
+            <xor c="Check Property?|good|bad">
+                <a>Landing Department Accept mortgage application</a>
+                <a>Landing Department Reject mortgage application due to property problem</a>
+            </xor>
+        </seq>
+        <a>Landing Department Reject Mortgage application due to financial problem</a>
+    </xor>
+</seq>

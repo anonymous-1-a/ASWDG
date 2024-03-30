@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>the admin office in SSP receives the invoice</a>
+    <a>The process starts</a>
+    <a>the admin office then sorts the voice per client ,sots the invoice per vendor , attaches invoice entry fom to invoice , enters required mfo on the invoice entry fom, and checks the completeness of the invoice</a>
+    <a>the client has completed the invoice</a>
+    <xor c="invoice is not completed|invoice is complete">
+        <a>a message is sent and the process finishes</a>
+        <seq>
+            <a>the admin office enters the info for the SLA and checks the priority</a>
+            <xor c="high priority?|Yes|No">
+                <a>the admin office applies the red stamp on entry invoice</a>
+                <a>Do nothing</a>
+            </xor>
+            <a>the admin office checks the invoice compliance</a>
+            <xor c="invoice is complete|invoice is not complete">
+                <a>the admin office allocates invoice to DEO</a>
+                <or>
+                    <a>the admin office can send it to experience staff who should proces the non-compliance invoice, call the client and request for information</a>
+                    <seq>
+                        <a>send a postal mal requesting the information complete</a>
+                        <a>a reminder is sent to the client after 10 hours</a>
+                    </seq>
+                </or>
+            </xor>
+            <a>the admin office can allocate invoice to DEO</a>
+        </seq>
+    </xor>
+</seq>

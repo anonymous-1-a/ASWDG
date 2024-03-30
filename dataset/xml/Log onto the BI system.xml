@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>Log onto the BI system</a>
+    <a>choosing Modeling Data Warehousing Workbench: Modeling</a>
+    <a>Start the Data Warehousing Workbench</a>
+    <a>choose Info Objects</a>
+    <a>Info Object tree is displayed</a>
+    <a>choose Create Info Area</a>
+    <a>enter a technical name and a description for the Info Area</a>
+    <a>Info Area is displayed in the Info Object tree</a>
+    <a>choose Create Info Object Catalog</a>
+    <a>enter a technical name and description</a>
+    <a>select Key Figure</a>
+    <a>Choose Create</a>
+    <a>Activate the Info Object catalog</a>
+</seq>

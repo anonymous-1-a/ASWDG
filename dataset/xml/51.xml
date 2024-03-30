@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>I have detected a number of personnel requirements</a>
+    <a>I report the vacancy to the Personnel Department</a>
+    <a>I wait to get the job description for review</a>
+    <a>it is advertized</a>
+    <xor c="certain circumstances|otherwise">
+        <a>I must ask for corrections again</a>
+        <a>I approve the job description</a>
+    </xor>
+    <xor c="colleague from the HR department still has questions about the tasks and requirements|have no question">
+        <a>I am available for clarifications</a>
+        <a>Do nothing</a>
+    </xor>
+</seq>

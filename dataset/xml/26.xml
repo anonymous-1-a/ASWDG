@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>The account creation process at this bank proceeds as follows.</a>
+    <a>visiting the bank website</a>
+    <a>she fills in her personal data and generates a PDF document with all the information relevant to this account request.</a>
+    <a>printing this PDF</a>
+    <a>the customer needs to visit a post office to send these documents.</a>
+    <a>The post officer will check the identity of the customer and mail the account to the bank.</a>
+    <a>he receives a new request</a>
+    <a>he'll check the customer data.</a>
+    <a>he may either accept or reject the request.</a>
+    <xor c="the available information|his own criteria">
+        <a>he will mail the account documents to the customer.</a>
+        <a>he will mail a letter of refusal. </a>
+    </xor>
+</seq>

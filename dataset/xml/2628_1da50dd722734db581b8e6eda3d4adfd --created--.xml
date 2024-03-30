@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seq>
+    <a>Customer select order</a>
+    <a>Place order</a>
+    <a>Delivery staff of Pizza Shop Order received</a>
+    <a>Delivery staff process payment</a>
+    <a>Customer Pay</a>
+    <a>Delivery staff receive money</a>
+    <xor c="Failed payment|Successful payment">
+        <seq>
+            <a>Hold order</a>
+            <xor c="unsolvable|workable">
+                <a>Terminate service</a>
+                <a>Update Order</a>
+            </xor>
+        </seq>
+        <seq>
+            <a>Pass order</a>
+            <a>Pizza Chef Make pizza</a>
+            <a>Pass pizza to delivery boy</a>
+            <a>Customer Receive pizza</a>
+        </seq>
+    </xor>
+</seq>

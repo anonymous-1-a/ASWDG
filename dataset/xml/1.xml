@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>The credit company receives the credit information from the customer</a>
+    <xor c="Does the requested amount be greater than 1M$?|yes|no">
+        <seq>
+            <a>the company assess the risk of the credit</a>
+            <xor c="Is the risk high after the assessment?|yes|no">
+                <seq>
+                    <a>an approval must be requested</a>
+                    <and>
+                        <a>the credit could be accepted or rejected</a>
+                        <a>an email is sent to the customer</a>
+                    </and>
+                </seq>
+                <seq>
+                    <a>the credit is accepted</a>
+                    <a>an email is sent to the customer</a>
+                </seq>
+            </xor>
+        </seq>
+        <a>an approval must be requested</a>
+    </xor>
+</seq>

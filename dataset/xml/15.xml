@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>the SO:Angebot/Auftrag receives a subsidiary order</a>
+    <a>The process starts</a>
+    <and>
+        <a>The SO : Angebot/Auftrag prepares goods for shipment and then ships the goods</a>
+        <seq>
+            <a>the SO:Angebot/Auftrag prepares invoicing</a>
+            <xor c="the customer is subsidiary and the subsidiary relationship is not yet modeled|the customer is independent or the subsidiary relationship is already modeled in ERP">
+                <seq>
+                    <a>SO:Address -management adds parent company as invoicing address</a>
+                    <a>the SO:Angebot/Auftrag create the invoice</a>
+                </seq>
+                <seq>
+                    <a>the SO:Angebot/Auftrag directly creates the invoice</a>
+                    <a>the SO:Angebot/Auftrag sends the invoice</a>
+                </seq>
+            </xor>
+        </seq>
+    </and>
+</seq>

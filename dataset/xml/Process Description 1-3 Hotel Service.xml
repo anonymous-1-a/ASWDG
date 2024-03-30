@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<seq>
+    <a>guest calls room service</a>
+    <a>room-service manager takes down the order</a>
+    <and>
+        <seq>
+            <a>room-service manager assign the order to the waiter</a>
+            <a>waiter ready a cart</a>
+            <a>waiter be responsible for nonalcoholic drinks</a>
+        </seq>
+        <seq>
+            <a>room-service manager submit an order ticket to the kitchen</a>
+            <a>kitchen prepare the food</a>
+        </seq>
+        <seq>
+            <a>room-service manager give an order to the sommelier</a>
+            <xor c="order include  wine or some other alcoholic beverage?|yes|no">
+                <a>sommelier fetch wine from the cellar and prepare any other alcoholic beverages</a>
+                <a>do nothing</a>
+            </xor>
+        </seq>
+    </and>
+    <a>waiter deliver the cart to the guests room</a>
+    <a>waiter return to the room-service station</a>
+    <a>waiter debit the guests account</a>
+</seq>
